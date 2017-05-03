@@ -6,7 +6,7 @@
           <tr>
             <td>{{iInfo.name}}</td>
             <td>总资产</td>
-            <td rowspan="2"><router-link :to="'#'" class="ibtn">充值</router-link></td>
+            <td rowspan="2"><router-link :to="'#'" class="abtn">充值</router-link></td>
           </tr>
           <tr>
             <td><span class="blue">{{iInfo.id}}</span></td>
@@ -187,7 +187,7 @@ export default {
 .myInfo table td span{
   font-size: 0.26rem;
 }
-.ibtn{
+.abtn{
   font-size: 0.26rem;
   color: #fff;
   padding: 0.15rem 0.4rem;
@@ -195,7 +195,7 @@ export default {
   border-radius: 0.1rem;
   background: rgb(220,47,53);
 }
-.ibtn:visited {
+.abtn:visited {
     color: #fff;
 }
 .scroll{

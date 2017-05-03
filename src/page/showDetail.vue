@@ -9,7 +9,6 @@
   </div>
 </template>
 <script>
-import {getQueryString} from '../../static/js/public/public.js'
 import {showProsData} from '../../static/js/data/prosData.js'
 import ititle from '@/components/title'
 import cont from '@/components/cont'
@@ -28,7 +27,7 @@ export default {
   computed:{
     thisPro:function(){
       var pro = "";
-      var id = getQueryString("id") || 0;
+      var id = this.$route.params.id;
       for (var i = 0; i < this.pros.length; i++) {
         if(id == this.pros[i].id) pro = this.pros[i].cont;
       };

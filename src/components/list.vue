@@ -42,7 +42,7 @@ export default {
       var data = that.p_data;
       for (var i = 0; i < data.length; i++) {
         if(data[i].Type == 0){
-          data[i].href = "/proDetail?id="+data[i].Id;
+          data[i].href = {name:'proDetail',params:{id:data[i].Id}};
           data[i].icon = "待";
           data[i].pWord = "发行价格";
           data[i].type = "待发行";
@@ -50,7 +50,7 @@ export default {
           data[i].pShow = "--";
         }
         else if(data[i].Type == 1){
-          data[i].href = "/proDetail?id="+data[i].Id;
+          data[i].href = {name:'proDetail',params:{id:data[i].Id}};
           data[i].icon = "发";
           data[i].pWord = "发行价格";
           data[i].type = "发行中";

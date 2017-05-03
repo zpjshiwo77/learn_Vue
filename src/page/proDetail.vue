@@ -8,7 +8,7 @@
   </div>
 </template>
 <script>
-import {iAjax,domainUrl,getQueryString} from '../../static/js/public/public.js'
+import {iAjax,domainUrl} from '../../static/js/public/public.js'
 import pInfo from '@/components/pInfo'
 import ititle from '@/components/title'
 import cont from '@/components/cont'
@@ -24,7 +24,7 @@ export default {
   methods:{
     getDatas:function(){
       var that = this;
-      var id = getQueryString("id");
+      var id = this.$route.params.id;
       iAjax(this.domainurl+"/Commodity/GetSingleCommodity",{Id:id},function(data){
         that.product = data;
         that.product.btnShow = that.product.Type == 1 ? true : false;

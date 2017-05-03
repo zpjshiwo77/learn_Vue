@@ -3,20 +3,6 @@ export function domainUrl(){
 	return "http://test.qjdsgf.com";
 }//end func
 
-//获得http url参数
-export function getQueryString(name) {
-    if(name && name!=''){
-         var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
-         var parameter = window.location.hash.split("?")[1];
-         if(parameter != "undefined" && parameter != undefined){
-            var r = parameter.match(reg);
-            if(r!=null)return  decodeURIComponent(r[2]); return null;
-         }
-         else return null
-    }//end if
-    else return null;
-}//end func
-
 //处理时间格式
 export function dealDate(time){
     var d = new Date(parseInt(time.replace("/Date(", "").replace(")/", ""), 10));;

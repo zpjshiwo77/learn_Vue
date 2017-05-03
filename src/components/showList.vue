@@ -1,6 +1,6 @@
 <template>
   <div class="cont">
-    <router-link :to="'/showDetail?id='+pro.id" class="block" v-for="pro in pros">
+    <router-link :to="{name:'showDetail',params:{id:pro.id}}" class="block" v-for="pro in pros">
         <img :src="pro.img">
         <p class="name">{{pro.name}}</p>
         <p class="price">{{pro.price}}</p>
